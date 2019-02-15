@@ -18,6 +18,7 @@ import {
 } from './src/Actions/actions'
 import SplashScreen from './src/components/SplashScreen';
 import LoginScreen from './src/containers/LoginScreen'
+import MainTabBar from './src/containers/MainTabBar'
 
 class App extends Component {
 
@@ -66,7 +67,7 @@ class App extends Component {
       <View style = {{flex :1}}>
        { !this.state.animatedTimeCompleted ? 
         <SplashScreen isLoading = { this.state.isInternetAvailabel }/> :
-        <LoginScreen />     
+        <MainTabBar />     
       } 
       </View>    
     );

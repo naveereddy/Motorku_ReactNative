@@ -1,0 +1,1 @@
+export const NAVIGATION_BAR_COLOR = "#FF1C31"

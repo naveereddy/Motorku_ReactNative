@@ -1,6 +1,6 @@
 
 import React, {Component} from "react"
-import {View,StyleSheet, TextInput, Dimensions, Button} from "react-native"
+import {View,StyleSheet, TextInput, Dimensions,TouchableHighlight,Text} from "react-native"
 
 const {height, width} = Dimensions.get('window'); 
 
@@ -23,11 +23,9 @@ export default class LoginScreen extends Component {
                 returnKeyType='send'
                 placeholderTextColor = '#fff'
                 />
-            <View style={styles.loginButton}>
-                <Button 
-                    title="Login"  
-                    />
-            </View>
+            <TouchableHighlight style={styles.loginButton}>
+               <Text>LOGIN</Text>
+            </TouchableHighlight>
         </View>
         );
     }
