@@ -43,7 +43,7 @@ class App extends Component {
   componentDidMount(){
     setTimeout(() => {
       this.setState({animatedTimeCompleted:true})
-    },3000)
+    },1000)
   }
   componentWillUnmount(){
     NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectionChange)

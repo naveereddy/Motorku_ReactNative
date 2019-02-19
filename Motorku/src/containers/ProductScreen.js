@@ -4,7 +4,6 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import { NAVIGATION_BAR_COLOR } from '../Utils/Colors'
 
 class ProductScreen extends Component {
-
     static navigationOptions = {
         headerTitle: "BRENDA",
         headerTintColor: "#fff",
@@ -12,20 +11,19 @@ class ProductScreen extends Component {
             backgroundColor: NAVIGATION_BAR_COLOR
         }
     }
-
-render(){
-    return (
-        <View style = {styles.Main}>
-            <Text>ProductScreenView</Text>
-        </View>
-    );
+    render(){
+        return (
+            <View style = {styles.Main}>
+                <Text>ProductScreenView</Text>
+            </View>
+        );
+    }
 }
-}
 
-const productScreens = createStackNavigator({
+const ProductScreens = createStackNavigator({
     BRENDA: ProductScreen
 })
-export default createAppContainer(productScreens);
+export default createAppContainer(ProductScreens);
 const styles = StyleSheet.create({
     Main:{
         flex:1,
