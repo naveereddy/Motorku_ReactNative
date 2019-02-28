@@ -6,6 +6,9 @@ export const SET_VALUE = 'SET_VALUE'
 // login Action types
 
 export const LOGIN_REQUEST = "LOGIN_REQUEST"
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
-export const LOGIN_FAILURE = "LOGIN_FAILURE"
 
+
+
+// profile Action type
+
+export const GET_USER_REQUEST = "GET_USER_REQUEST"

@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires access to the photo library.</string>
 	<key>UILaunchStoryboardName</key>
@@ -55,5 +55,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Proxima Nova Bold.otf</string>
+		<string>Proxima Nova Condensed Semibold.otf</string>
+		<string>Proxima Nova Light.otf</string>
+		<string>Proxima Nova Regular.otf</string>
+		<string>Proxima Nova Semibold Italic.otf</string>
+		<string>Proxima Nova Semibold.otf</string>
+	</array>
 </dict>
 </plist>

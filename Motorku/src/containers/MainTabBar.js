@@ -6,11 +6,20 @@ import { NAVIGATION_BAR_COLOR } from '../Utils/Colors'
 
 import  ProductScreen from './ProductScreen'
 import  MessageScreen from './MessageScreen'
-import  ProfileScreen from './ProfileScreen'
+
+import  ProfileScreen from './Profile/ProfileScreen'
+import  EditProfileScreen from './Profile/ProfileScreen'
+import  AddMotorScreen from './Profile/ProfileScreen'
+
 import  EmergencyScreen from './EmergencyScreen'
 import  SettingScreen from './SettingsScreen'
-import  LoginScreen from './LoginScreen'
+import  LoginScreen from './Login/LoginScreen'
 
+const profileStack = createStackNavigator({
+    profile : ProfileScreen,
+    editProfile: EditProfileScreen,
+    addMotor: AddMotorScreen
+})
 const TabBar = createBottomTabNavigator({
     PRODUC: {
         screen: ProductScreen,
@@ -18,8 +27,8 @@ const TabBar = createBottomTabNavigator({
             tabBarLabel: 'PRODUC',
             tabBarIcon: ({ focused }) => {
                 const image = focused 
-                ? require('../Assets/ic_tabbar_home_selected.png') 
-                : require('../Assets/ic_tabbar_home_normal.png')
+                ? require('../Assets/images/ic_tabbar_home_selected.png') 
+                : require('../Assets/images/ic_tabbar_home_normal.png')
                 return (
                     <Image 
                         source={image}
@@ -38,8 +47,8 @@ const TabBar = createBottomTabNavigator({
             tabBarLabel: 'PESAN',
             tabBarIcon: ({ focused }) => {
                 const image = focused 
-                ? require('../Assets/ic_tabbar_inbox_selected.png') 
-                : require('../Assets/ic_tabbar_inbox_normal.png')
+                ? require('../Assets/images/ic_tabbar_inbox_selected.png') 
+                : require('../Assets/images/ic_tabbar_inbox_normal.png')
                 return (
                     <Image 
                         source={image}
@@ -49,13 +58,13 @@ const TabBar = createBottomTabNavigator({
         }
     },
     PROFIL: {
-        screen: ProfileScreen,
+        screen: profileStack,
         navigationOptions :{
             tabBarLabel: 'PROFIL',
             tabBarIcon: ({ focused }) => {
                 const image = focused 
-                ? require('../Assets/ic_tabbar_profile_selected.png') 
-                : require('../Assets/ic_tabbar_profile_normal.png')
+                ? require('../Assets/images/ic_tabbar_profile_selected.png') 
+                : require('../Assets/images/ic_tabbar_profile_normal.png')
                 return (
                     <Image 
                         source={image}
@@ -70,8 +79,8 @@ const TabBar = createBottomTabNavigator({
             tabBarLabel: 'DARURAT',
             tabBarIcon: ({ focused }) => {
                 const image = focused 
-                ? require('../Assets/ic_tabbar_emer_selected.png') 
-                : require('../Assets/ic_tabbar_emer_normal.png')
+                ? require('../Assets/images/ic_tabbar_emer_selected.png') 
+                : require('../Assets/images/ic_tabbar_emer_normal.png')
                 return (
                     <Image 
                         source={image}
@@ -86,8 +95,8 @@ const TabBar = createBottomTabNavigator({
             tabBarLabel: 'Settings',
             tabBarIcon: ({ focused }) => {
                 const image = focused 
-                ? require('../Assets/ic_tabbar_settings_selected.png') 
-                : require('../Assets/ic_tabbar_settings_normal.png')
+                ? require('../Assets/images/ic_tabbar_settings_selected.png') 
+                : require('../Assets/images/ic_tabbar_settings_normal.png')
                 return (
                     <Image 
                         source={image}

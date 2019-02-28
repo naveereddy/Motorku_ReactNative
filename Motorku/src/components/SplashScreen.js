@@ -6,7 +6,7 @@ export default class SplashScreen extends Component {
     render() {
         return (
             <View style = {styles.Main}>
-            <Image source={ require('../Assets/bg_splash.jpg') } />
+            <Image source={ require('../Assets/images/bg_splash.jpg') } />
             <View style = {styles.LoaderPostion} >
                {this.props.isLoading ?
                <ActivityIndicator size= 'small' /> :

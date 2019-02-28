@@ -17,7 +17,6 @@ import {
   settingValue
 } from './src/Actions/actions'
 import SplashScreen from './src/components/SplashScreen';
-import LoginScreen from './src/containers/LoginScreen'
 import MainTabBar from './src/containers/MainTabBar'
 
 class App extends Component {
