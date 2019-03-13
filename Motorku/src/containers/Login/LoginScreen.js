@@ -36,11 +36,11 @@ class LoginScreen extends Component {
             saveRefreshToken(nextProps.loginResponse.response.refresh_token)
             this.props.navigation.goBack()
         }
-    }
+    }   
     render(){
         return (
           <View style={styles.Main}>
-             {/* <Loader isLoading= {this.state.isLoading} /> */}
+             <Loader isLoading= {this.state.isLoading} />
             <View style={styles.closeButton}>
                 <TouchableHighlight style = {styles.closeImagePosition} onPress = {() => this.props.navigation.goBack()}>
                     <Image source={require('../../Assets/images/ic_close_white.png')}/>
@@ -48,22 +48,20 @@ class LoginScreen extends Component {
             </View>
             <View style={styles.textFieldsView}>
                 <TextInput 
-                    style = {[styles.margins, styles.borders, styles.fontSizes]} 
+                    style = {[styles.margins, styles.borders, styles.fontSizes, styles.textInputColors]} 
                     placeholder = "Email *" 
                     maxLength={50} 
-                    color = '#FFF'
                     returnKeyType='go'
                     placeholderTextColor = '#fff'
                     value = {this.state.username}
                     onChangeText = {(email) => { this.setState({username:email})}}
                     />
                 <TextInput  
-                    style = {[styles.borders, styles.margins, styles.fontSizes]} 
+                    style = {[styles.borders, styles.margins, styles.fontSizes, styles.textInputColors]} 
                     placeholder = "KATA SANDI *" 
                     maxLength={10} 
                     secureTextEntry={true} 
                     returnKeyType='send'
-                    color = '#FFF'
                     placeholderTextColor = '#fff'
                     value = {this.state.password}
                     onChangeText = {(passwordText) => { this.setState({password:passwordText})}}

@@ -8,7 +8,7 @@
  */
 
 import React, {Component} from 'react';
-import { NetInfo, View} from 'react-native';
+import { NetInfo, View, PushNotificationIOS} from 'react-native';
 import { connect } from 'react-redux';
 import {
   increment,
@@ -18,6 +18,10 @@ import {
 } from './src/Actions/actions'
 import SplashScreen from './src/components/SplashScreen';
 import MainTabBar from './src/containers/MainTabBar'
+import {saveApnsPushToken} from './src/Utils/Constants'
+
+
+var PushNotification = require('react-native-push-notification');
 
 class App extends Component {
 
@@ -27,6 +31,33 @@ class App extends Component {
         isInternetAvailabel : false,
         animatedTimeCompleted: false
       }
+      PushNotification.configure({
+
+      // (optional) Called when Token is generated (iOS and Android)
+      onRegister: function(token) {
+          saveApnsPushToken(token.token)
+      },
+   
+      // (required) Called when a remote or local notification is opened or received
+      onNotification: function(notification) {
+          console.log( 'NOTIFICATION:', notification );
+   
+          // process the notification
+   
+          // required on iOS only (see fetchCompletionHandler docs: https://facebook.github.io/react-native/docs/pushnotificationios.html)
+          notification.finish(PushNotificationIOS.FetchResult.NoData);
+      },
+   
+      // ANDROID ONLY: GCM or FCM Sender ID (product_number) (optional - not required for local notifications, but is need to receive remote push notifications)
+      senderID: "YOUR GCM (OR FCM) SENDER ID",
+      permissions: {
+          alert: true,
+          badge: true,
+          sound: true
+      },
+      popInitialNotification: true,
+      requestPermissions: true,
+  });
   }
   onValueChange(number){
     if (number == "") {

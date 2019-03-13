@@ -15,12 +15,11 @@ export const BaseHeaders = {
 // base params 
 
 export const BaseParams = {
-    Action: "",
     ApplicationName: '4AD77557-2B49-4A77-80A3-AC9AD76542A3',
-    OperatingSystem: "1",
-    UserVersion: "1.0",
-    AccountType: "1",
-    DeviceType:'0'
+    OperatingSystem: '1',
+    UserVersion: '1.0',
+    AccountType: '1',
+    DeviceType: '0'
 }
 
 export const  BaseHeadersWithContentType = {
@@ -48,6 +47,7 @@ export const APIType = {
 
 // root urls 
 export const HOME_URL = "https://astrauserprofiledevelopment.azurewebsites.net";
+export const API_URL = "https://astramotorkudevelopment-mobile.azurewebsites.net";
 
 
 
@@ -61,3 +61,4 @@ export const HOME_URL = "https://astrauserprofiledevelopment.azurewebsites.net";
 // sub urls
 export const SIGN_IN_URL = "/token"
 export const PROFILE_URL = "/api/myprofile"
+export const GET_BRANCH = "/api/dealer/all";

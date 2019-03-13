@@ -12,7 +12,8 @@ export default class Loader extends Component {
 
     render(){
         return(
-            <Modal visible = { this.props.isLoading } transparent={true}>
+            <Modal visible = { this.props.isLoading } transparent={true}             animationType="fade"
+            animationType="fade">
                 <View style = {styles.loaderContainer}>
                     <View style = {styles.loaderView}>
                         <ActivityIndicator size = 'large' color = "#000" />

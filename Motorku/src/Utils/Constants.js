@@ -11,3 +11,11 @@ export const saveEmail = email => {
 export const saveRefreshToken = refresh_token => {
     AsyncStorage.setItem('refresh_token', refresh_token)
 }
+
+export const saveProfileImage = imageData => {
+    AsyncStorage.setItem('profileImage', imageData)
+}
+
+export const saveApnsPushToken = pushToken => {
+    AsyncStorage.setItem('ApnsToken', pushToken)
+}

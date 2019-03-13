@@ -4,7 +4,10 @@ import {createBottomTabNavigator, createAppContainer, createStackNavigator} from
 
 import { NAVIGATION_BAR_COLOR } from '../Utils/Colors'
 
-import  ProductScreen from './ProductScreen'
+import  ProductScreen from './Product/ProductScreen'
+import  DealerScreen from './Product/Dealer/Dealer'
+
+
 import  MessageScreen from './MessageScreen'
 
 import  ProfileScreen from './Profile/ProfileScreen'
@@ -20,9 +23,13 @@ const profileStack = createStackNavigator({
     editProfile: EditProfileScreen,
     addMotor: AddMotorScreen
 })
+const productStack = createStackNavigator({
+    BRENDA: ProductScreen,
+    Dealer: DealerScreen
+})
 const TabBar = createBottomTabNavigator({
     PRODUC: {
-        screen: ProductScreen,
+        screen: productStack,
         navigationOptions :{
             tabBarLabel: 'PRODUC',
             tabBarIcon: ({ focused }) => {

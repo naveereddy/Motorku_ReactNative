@@ -12,3 +12,8 @@ export const LOGIN_REQUEST = "LOGIN_REQUEST"
 // profile Action type
 
 export const GET_USER_REQUEST = "GET_USER_REQUEST"
+
+
+// Dealer Action type
+
+export const GET_DEALERS_REQUEST  = "GET_DEALERS_REQUEST"

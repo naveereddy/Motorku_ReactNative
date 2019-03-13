@@ -22,10 +22,12 @@ export const styles = StyleSheet.create({
     },
     userText:{
         marginTop: 10,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        fontFamily: 'ProximaNova-Bold',
     },
     topMainView:{
-        zIndex:10
+        zIndex:10,
+        borderRadius: 60
     },
     listItemsColor:{
         color: '#000',

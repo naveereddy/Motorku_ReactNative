@@ -48,5 +48,8 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Proxima Nova',
         fontWeight: 'bold'
+    },
+    textInputColors:{
+        color: WHITE_COLOR
     }
 });
